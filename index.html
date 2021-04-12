@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simrit's Portfolio Website</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
+        
+        <!-- Update these with your own fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Roboto+Slab:400,700&display=swap" rel="stylesheet"> 
+        
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <body>
+        
+        <header>
+            <div class="logo">
+                Simrit Kakkar
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">My Hobbies</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
+                    <li class="nav__item"><a href="#work" class="nav__link">My Videos</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <!-- Introduction -->
+        <section class="intro" id="home">
+            <h1 class="section__title section__title--intro">
+                Hi there, I am <strong>Simrit Kakkar</strong>
+            </h1>
+           <p class="section__subtitle section__subtitle--intro">A Coder, Student, Swimmer & A Piano Player</p>
+            <img src="img/simritpicture.PNG" alt="a picture of Jane Smith smiling" class="intro__img">
+        </section>
+        <div class="slideshow-container">
+
+<div class="mySlides fade; align: center" style="display: block;">
+  <div class="numbertext">1 / 4</div>
+  <img src="img/capturesimrit.jpg" style="width:80%" align: "center">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade" style="display: none;">
+  <div class="numbertext">2 / 4</div>
+  <img src="img/calgary1.jpg" style="width:80%" >
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade" style="display: none;">
+  <div class="numbertext">3 / 4</div>
+  <img src="img/calgary2.jpg" style="width:80%" >
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade" style="display: none;">
+  <div class="numbertext">4 / 4</div>
+  <img src="img/calgary3.jpg" style="width:80%" >
+  <div class="text"></div>
+</div>
+
+<br>
+<div style="text-align:center">
+  <span class="dot active"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
+</script>
+        
+        <!-- My services -->
+        <section class="my-services" id="services">
+            <h2 class="section__title section__title--services">What are my hobbies?</h2>
+            <div class="services">
+                <div class="service">
+                    <h3>Coding</h3>
+                    <p><h5>I am learning how to code. I have done CSS, HTML, Javascript and PHP. These languages for code also helped me develop my own website which you would be viewing right now.</h5></p>
+                </div> <!-- / service -->
+                
+                <div class="service">
+                    <h3>Reading </h3>
+                    <p><h5>During my freetime, I love reading books which are of my interest.A habit of Reading every day can be very useful in simple terms. It makes you communicate with the rest of the world , the day-to-day happenings in your surroundings,  & gain extra knowledge about the world </h5></p>
+                </div> <!-- / service -->
+                
+                <div class="service">
+                    <h3>Musical Love</h3>
+                    <p><h5>At the age of 6, when I was in 2nd Grade, I developed a strong hobby of playing Piano. In this piano journey, all of the support & inspiration came from my Dad. It all started when I saw my father take Piano Classes from a Piano Teacher, and that is from where I gained a lot  of inspiration. This was the time when my Dad realised that I had the confidence, and courage to continue my interest by playing Piano(extracurricural activity) along with different activities. And I agree with that  </h5></p>
+                </div> <!-- / service -->
+            </div> <!-- / services -->
+            
+            <a href="#work" class="btn">My Videos</a>
+        </section>
+        
+        
+        <!-- About me -->
+        <section class="about-me" id="about">
+           <h2 class="section__title section__title--about">Who am I</h2>
+           <p class="section__subtitle section__subtitle--about">A 10th Grade Student studying in Canada</p>
+           
+           <div class="about-me__body">
+               <p>Simrit Kakkar is a 10th grade student getting education from Evan Hardy Collegiate, Saskatoon, Saskatchewan. He has completed Grade level 6 Piano from British Trinity College London, is an A1 certified in German from Goethe Max Mueller Bhavan, won several awards in Swimming at School. His aspires to become a Civil Airline Pilot when he grows up</p>
+           </div>
+           
+           <img src="img/simrit2.PNG" alt="Jane leaning against a bus" class="about-me__img">
+        </section>
+        
+        <!-- My Work -->
+        <section class="my-work" id="work">
+            <h2 class="section__title section__title--work">Watch My Videos</h2>
+            <p class="section__subtitle section__subtitle--work">A selection of my videos</p>
+            
+            <div class="portfolio">
+                <!-- Portfolio item 01 -->
+                <a href="portfolio-item.html" class="portfolio__item; img size: cover">
+                    <img src="https://i9.ytimg.com/vi/hTgRHYSO-QE/mq2.jpg?sqp=CNDGzYMG&rs=AOn4CLA_UI08jazajTHjYDmH459nSTedIw" alt="" class="portfolio__img">
+                </a>
+                
+                <!-- Portfolio item 02 -->
+                <a href="portfolio-item2.html" class="portfolio__item; img size: cover">
+                    <img src="https://i9.ytimg.com/vi/vlW8QS3Pykc/mq2.jpg?sqp=CPzIzYMG&rs=AOn4CLDKFNOFfEMoNqRZzNT17JN1zDYNvQ" alt="" class="portfolio__img">
+                </a>
+                
+                <!-- Portfolio item 03 -->
+                <a href="portfolio-item3.html" class="portfolio__item; img size: cover">
+                    <img src="https://i9.ytimg.com/vi/y4x2Rosryd4/mq2.jpg?sqp=CPzIzYMG&rs=AOn4CLAryjwENEYWM0YCkJOQJkKsIIiFiQ" alt="" class="portfolio__img">
+                </a>
+                
+                <!-- Portfolio item 04 -->
+                <a href="portfolio-item4.html" class="portfolio__item; img size: cover">
+                    <img src="https://i9.ytimg.com/vi/1jUyMRrgE-w/mq2.jpg?sqp=CPzIzYMG&rs=AOn4CLDPlu7hYC-U_n7_W6eB2i3hiE0_jQ" alt="" class="portfolio__img">
+                </a>
+                
+                <!-- Portfolio item 05 -->
+                <a href="portfolio-item5.html" class="portfolio__item;img size: cover">
+                    <img src="https://i9.ytimg.com/vi/7luLzKBumig/mq2.jpg?sqp=CPzIzYMG&rs=AOn4CLDXOgEFYrVJun1gGMcLMkNRapvnyA" alt="" class="portfolio__img">
+                </a>
+                
+                <!-- Portfolio item 06 -->
+                <a href="portfolio-item6.html" class="portfolio__item;img size: cover">
+                    <img src="https://i9.ytimg.com/vi/EHJL2FS3ync/mq2.jpg?sqp=CKjLzYMG&rs=AOn4CLCEElwvAyF0DrrS9eYXL0wWKDLKvQ" alt="" class="portfolio__img">
+                </a>
+                
+                <!-- Portfolio item 07 -->
+                <a href="portfolio-item7.html" class="portfolio__item;img size: cover">
+                    <img src="https://i9.ytimg.com/vi/19WYf3-9E5Y/mq2.jpg?sqp=CKjLzYMG&rs=AOn4CLAn7uwdjyA9JSZ170yEZBRzhjrWeg" alt="" class="portfolio__img">
+                </a>
+                
+                <!-- Portfolio item 08 -->
+                <a href="portfolio-item8.html" class="portfolio__item;img size: cover">
+                    <img src="https://i9.ytimg.com/vi/Y83YyLC-PD8/mq2.jpg?sqp=CKjLzYMG&rs=AOn4CLBrTzY_tBAxhYVuo68HyVXy7ZNhVA" alt="" class="portfolio__img">
+                </a>
+                
+                <!-- Portfolio item 09 -->
+                <a href="portfolio-item9.html" class="portfolio__item;img size: cover">
+                    <img src="https://i9.ytimg.com/vi/lYdbi0l3u3s/mq2.jpg?sqp=CKjLzYMG&rs=AOn4CLBNKp-bFJnltpjA5t9vUGSkO3Y64Q" alt="" class="portfolio__img">
+                </a>
+                
+                <!-- Portfolio item 0 0-->
+                <a href="portfolio-item10.html" class="portfolio__item;img size: cover">
+                    <img src="https://i9.ytimg.com/vi/r6GjwhmjLcA/mq2.jpg?sqp=CKjLzYMG&rs=AOn4CLAHHtBMhl28ghtQZHaFcv7cdVS85Q" alt="" class="portfolio__img">
+                </a>
+                <a href="portfolio-item11.html" class="portfolio__item;img size: cover">
+                    <img src="https://i9.ytimg.com/vi/iZ7WUhlq3J8/mq2.jpg?sqp=CKjLzYMG&rs=AOn4CLAu_qncMA_ICTxvG-UyLE2m3tivJA" alt="" class="portfolio__img">
+                </a>
+            </div>
+        </section>
+        
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div style="background-color: #111 ; font-style: normal">
+    <p style=" font-size: 90%; color: white">Contact and get to know about Simrit at</p>
+    </div>
+
+            <a href="mailto:simritkakkar06@gmail.com" class="footer__link">simritkakkar06@gmail.com</a>
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://www.instagram.com/simritkakkar06/">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://www.youtube.com/user/kakkararundeep/featured">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://discord.com/channels/730891644722741310/730891644722741312">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://github.com/simrit1">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+        
+        
+        <script src="js/index.js"></script>
+        <div style=" background: #111;text-align: right; color: white; font-size: 90%">
+            <div class="div">
+    
+    <i>Website is under construction</i>
+    <br>
+    <div align="center">Live Visitors:<img src="https://hitwebcounter.com/counter/counter.php?page=7794812&style=0010&nbdigits=5&type=ip&initCount=0" title="Free Counter" Alt="web counter"  border="0" /></a></div>      
+</div>
+        
+    </body>
+</html>
